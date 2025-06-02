@@ -1,0 +1,423 @@
+body {
+  font-family: sans-serif;
+  line-height: 1.6;
+  margin: 20px;
+  background: linear-gradient(135deg, #dadff6 0%, #6f6e71 100%);
+}
+
+h1,
+h2,
+h3 {
+  color: #333;
+}
+
+section {
+  margin-bottom: 30px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+hr {
+  margin: 20px 0;
+  border: 0;
+  border-top: 1px solid #eee;
+}
+
+input[type="file"] {
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 8px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.navbar-custom {
+  height: 60px;
+  border-bottom: 1px solid #ce1717;
+}
+.navbar-brand-centered {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Style the header with a grey background and some padding */
+.header {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  overflow: hidden;
+  background-color: #5e81eb;
+  padding: 20px 10px;
+}
+
+/* Style the header links */
+.header a {
+  float: center;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+/* Change the background color on mouse-over */
+.header a:hover {
+  background-color: #dddddd;
+  color: black;
+}
+
+/* Style the active/current link*/
+/* .header a.active {
+  background-color: dodgerblue;
+  color: white;
+} */
+
+/* Float the link section to the right */
+.header-right {
+  float: right;
+}
+
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .header-right {
+    float: none;
+  }
+}
+
+#refresh-list-btn {
+  background-color: #28a745;
+}
+#refresh-list-btn:hover {
+  background-color: #218838;
+}
+#cancel-action-btn {
+  background-color: #dc3545;
+}
+#cancel-action-btn:hover {
+  background-color: #c82333;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.about {
+  margin-top: 15px;
+  padding: 10px;
+  border: 6px solid #ddd;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+}
+
+.action-buttons button {
+  font-size: 0.9em;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+
+.action-buttons-delete {
+  font-size: 0.9em;
+  padding: 8px 15px;
+  margin-right: 5px;
+  background-color: #f44336;
+  margin-top: 5px;
+  border-radius: 4px;
+}
+
+#upload-status,
+.result-box {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.result-box {
+  background-color: #e9ecef;
+  border: 1px solid #ced4da;
+  white-space: pre-wrap; /* Agar format teks terjaga */
+  word-wrap: break-word; /* Agar teks panjang pindah baris */
+}
+
+.success {
+  color: green;
+  font-weight: bold;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+}
+
+.match {
+  color: green;
+  font-weight: bold;
+}
+
+.mismatch {
+  color: orange;
+  font-weight: bold;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+.result-box {
+  background-color: #e9ecef;
+  border: 1px solid #ced4da;
+  white-space: pre-wrap; /* Agar format teks terjaga (termasuk <br>) */
+  word-wrap: break-word;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 4px;
+  line-height: 1.5; /* Perbaiki jarak antar baris */
+}
+
+.match {
+  color: green;
+  font-weight: bold;
+}
+
+.mismatch {
+  color: #dc3545; /* Merah untuk mismatch */
+  font-weight: bold;
+}
+
+.similarity {
+  color: #007bff; /* Biru untuk info similarity */
+  font-weight: bold;
+  display: block; /* Tampilkan di baris baru */
+  margin-top: 5px;
+}
+.warning {
+  color: #ffc107; /* Kuning untuk peringatan */
+  display: block;
+  margin-top: 5px;
+}
+
+/* ... CSS lainnya ... */
+
+.search-container {
+  margin-bottom: 15px;
+  display: flex;
+  gap: 5px; /* Jarak antar elemen */
+  align-items: center;
+}
+
+#search-input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  flex-grow: 1; /* Input mengambil sisa ruang */
+}
+
+.pagination-container {
+  margin-top: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.pagination-container button {
+  padding: 5px 10px;
+}
+
+.pagination-container button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+#page-info {
+  font-weight: bold;
+}
+
+#total-docs-info {
+  font-size: 0.9em;
+  color: #555;
+}
+
+#list-loading,
+#list-error {
+  margin: 10px 0;
+  font-style: italic;
+}
+
+/* Style untuk tombol Hapus */
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+  padding: 4px 8px; /* Lebih kecil */
+  font-size: 0.8em; /* Lebih kecil */
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}
+
+/* Pastikan kolom aksi dan hapus cukup lebar */
+#documents-table th:nth-child(4), /* Kolom Aksi */
+#documents-table th:nth-child(5) {
+  /* Kolom Hapus */
+  width: 120px; /* Sesuaikan jika perlu */
+}
+#documents-table td:nth-child(4), /* Kolom Aksi */
+#documents-table td:nth-child(5) {
+  /* Kolom Hapus */
+  text-align: center; /* Pusatkan tombol */
+}
+
+/* ... (CSS yang sudah ada tetap sama) ... */
+
+#verification-result {
+  /* Pastikan ada margin bawah jika hasil integritas muncul */
+  margin-bottom: 20px;
+}
+
+#similarity-details-section {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #007bff; /* Border biru untuk membedakan */
+  border-radius: 5px;
+  background-color: #f0f8ff; /* Latar belakang biru muda */
+}
+
+#similarity-details-section h3 {
+  color: #0056b3;
+  margin-top: 0;
+}
+
+.similarity-visual-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.similarity-bar-container {
+  width: 80%; /* Atau lebar tetap misal 300px */
+  height: 25px;
+  background-color: #e9ecef;
+  border-radius: 5px;
+  overflow: hidden; /* Agar fill tidak keluar dari border radius */
+  border: 1px solid #ccc;
+  margin-right: 10px;
+}
+
+.similarity-bar-fill {
+  width: 0%; /* Diatur oleh JS */
+  height: 100%;
+  background-color: #28a745; /* Hijau untuk kemiripan tinggi */
+  transition: width 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+
+#similarity-percentage-text {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+}
+
+#similarity-notice {
+  font-style: italic;
+  font-size: 0.9em;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+#diff-output-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px; /* Jarak antar panel */
+  margin-top: 10px;
+}
+
+.diff-panel {
+  flex: 1; /* Kedua panel mengambil ruang yang sama */
+  border: 1px solid #ddd;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 4px;
+  max-height: 400px; /* Batasi tinggi dan buat scrollable */
+  overflow-y: auto; /* Scroll jika konten lebih tinggi */
+}
+
+.diff-panel h4 {
+  margin-top: 0;
+  font-size: 1em;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.diff-text-area {
+  white-space: pre-wrap; /* Agar spasi dan baris baru terjaga */
+  word-wrap: break-word; /* Agar kata panjang pindah baris */
+  font-family: "Courier New", Courier, monospace; /* Font Monospace untuk diff */
+  font-size: 0.9em;
+  line-height: 1.4;
+}
+
+/* Styling untuk diff changes */
+.diff-added {
+  background-color: #e6ffed; /* Hijau muda untuk teks yang ditambahkan */
+  color: #22863a;
+  text-decoration: none; /* Hapus underline default dari <ins> jika pakai itu */
+}
+
+.diff-removed {
+  background-color: #ffeef0; /* Merah muda untuk teks yang dihapus */
+  color: #cb2431;
+  text-decoration: none;
+}
+
+.diff-common {
+  /* Bisa dibiarkan default atau diberi style sedikit berbeda jika perlu */
+  color: #586069;
+}
